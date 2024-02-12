@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamma ustoz ma'lumotlari</title>
+</head>
+<body>
+<h1>Hamma ustoz ma'lumotlari</h1>
+<br>
+<br>
+        {% for ustoz in ustozlar %}
+            <h2>Ism:{{ustoz.ism}} Familiya: {{ustoz.familiya}} Yo'nalishi {{ustoz.yonalish_id}}</h2><br>
+        <button><a href="/ustoz/{{ustoz.id}}/tahrirlash/">Tahrirlash</a></button>  <button><a href="/ustoz/{{ustoz.id}}/delete/">O'chirish</a></button>
+
+{% endfor %}
+<br>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hamma to'lovlar ro'yhati</h1>
+<br>
+<br>
+        {% for tolov in tolovlar %}
+            <h2>Ism: {{tolov.oquvchi_id.ism}} Familya: {{tolov.oquvchi_id.familya}} {{tolov.guruh_id.nom}} Summa: {{tolov.summa}} sum Qarz: {{tolov.qarz}} sum Chegirma: {{tolov.chegirma}} %</h2> <br> <br>
+        <button><a href="/tolov/{{tolov.id}}/tahrirlash/">Tahrirlash</a></button>  <button><a href="/tolov/{{tolov.id}}/delete/">O'chirish</a></button>
+{% endfor %}
+<br>
+</body>
+</html>

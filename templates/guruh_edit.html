@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Guruh ma'lumotlarini tahrirlash</h1>
+<br>
+        <form method="post" action="/guruh/{{guruhlar.id}}/tahrirlash/">{% csrf_token %}
+            <label>Nom</label><br>
+            <input type="text" name="nom" value="{{guruhlar.nom}}"><br>
+            <label>Yo'nalish</label><br>
+            <select name="yonalish">
+                {% for yonalish in yonalishlar %}
+                <option value="{{ yonalish.id }}">{{yonalish.nomi}}</option>
+                {% endfor %}
+            </select><br>
+            <label>Tashkil topgan</label><br>
+            <input type="date" name="t_topgan"><br>
+
+            <label>Ustoz</label><br>
+            <select name="ustoz">
+                {% for ustoz in Ustoz %}
+                <option value="{{ustoz.id}}">{{ustoz.ism}}</option>
+                {% endfor%}
+            </select><br>
+            <label>Xona</label><br>
+            <select name="xona">
+                {% for xona in xonalar %}
+                <option value="{{xona.id}}">{{xona.raqam}}</option>
+                {% endfor%}
+            </select><br>
+            <label>Dars vaqti</label><br>
+            <input type="text" name="d_vaqti"><br><br>
+            <button type="submit">Tahrirlashni amalga oshiring</button>
+
+        </form>
+<br>
+</body>
+</html>

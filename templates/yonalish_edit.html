@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Ma'lumotlarni tahrirlash</h1>
+<br>
+    <form method="post" action="/yonalish/{{yonalish.id}}/tahrirlash/">{% csrf_token %}
+        <label>Nomi</label><br>
+        <input type="text" name="nomi" value="{{yonalish.nomi}}"><br>
+
+        <label>Narx</label><br>
+        <input type="number" name="narx" value="{{yonalish.narx}}"><br><br>
+
+        <button type="submit">Tahrirlashni amalga oshirish</button>
+    </form>
+<br>
+</body>
+</html>

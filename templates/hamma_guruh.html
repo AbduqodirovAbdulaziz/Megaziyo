@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamma guruhlar</title>
+</head>
+<body>
+<h1>Hamma guruh ma'lumotlari</h1>
+<br>
+<br>
+        {% for guruh in guruhlar %}
+            <h2>Guruh: {{guruh.nom}} Yo'nalish: {{guruh.yonalish_id.nomi}} Xona raqami: {{guruh.xona_id.raqam}}</h2><br>
+            <button><a href="/guruh/{{guruh.id}}/tahrirlash/">Tahrirlash</a></button>  <button><a href="/guruh/{{guruh.id}}/delete/">O'chirish</a></button>
+            <br>
+        {% endfor %}
+<br>
+</body>
+</html>

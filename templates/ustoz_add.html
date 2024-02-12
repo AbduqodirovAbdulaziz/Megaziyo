@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uztozga ma'lumot qo'shsish</title>
+</head>
+<body>
+<h1>Ustoz ma'lumotlarini qo'shish</h1>
+<br>
+<br>
+        <form method="post">{% csrf_token %}
+            <label>Ism </label><br>
+            <input type="text" name="ism" placeholder="ismni kiriting"><br>
+
+            <label>Familya</label><br>
+            <input type="text" name="familya" placeholder="familyani kiriting"><br>
+
+            <label>Yo'nalish</label><br>
+            <select name="yonalish">
+                {% for yonalish in yonalishlar%}
+                    <option value="{{yonalish.id}}">{{yonalish.nomi}}</option>
+                {% endfor %}
+            </select><br>
+
+            <label>Telefon raqam</label><br>
+            <input type="text" name="tel_raqam" placeholder="telefon raqamini kiriting"><br>
+
+            <label>Manzil</label><br>
+            <input type="text" name="manzil" placeholder="manzilni kiriting"><br><br>
+
+            <button>Qo'shish</button>
+        </form>
+<br>
+</body>
+</html>

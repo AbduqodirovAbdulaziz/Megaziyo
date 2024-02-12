@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>To'lov ma'lumotlarini tahrirlash</h1>
+<br>
+<br>
+    <form method="post" action="/tolov/{{Tolov.id}}/tahrirlash/">{% csrf_token %}
+        <label>Summa</label>
+        <input type="number" name="summa" value="{{Tolov.summa}}">
+        <label>Qarz</label>
+        <input type="number" name="qarz" value="{{Tolov.qarz}}">
+        <label>Chegirma</label>
+        <input type="number" name="chegirma" value="{{Tolov.chegirma}}">
+        <button type="submit"> Tahrirlashni amalga oshirish</button>
+    </form>
+<br>
+<br>
+</body>
+</html>
